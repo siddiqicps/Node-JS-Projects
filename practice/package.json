@@ -11,5 +11,8 @@
     "Node.js"
   ],
   "author": "Tahir Siddiqui",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
 }
