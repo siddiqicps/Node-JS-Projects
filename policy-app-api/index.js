@@ -63,7 +63,7 @@ app.get('/get-policy-html', async (req, res) => {
 
 app.get('/get-policy-text', async (req, res) => {
   try {
-    const [rows, fields] = await pool.query('SELECT * FROM `policies` Where is_active=1');
+    const [rows, fields] = await pool.query('SELECT * FROM `policies` Where is_active=1 Order By id desc Limit 1');
     // Connection is automatically released when query resolves
     res.json({message: 'Policy fetched successfully', data: rows})
   } catch (err) {
